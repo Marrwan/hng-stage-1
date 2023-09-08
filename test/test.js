@@ -30,3 +30,26 @@ describe('JSON Format', () => {
     });
   });
   
+  describe('Data Validation', () => {
+    it('should have a valid slack_name', async () => {
+      const response = await axios.get(`${baseUrl}/api?slack_name=example_name&track=backend`);
+      const slackName = response.data.slack_name;
+      expect(slackName).to.equal('example_name');
+    });
+  
+  
+    it('should have a valid track', async () => {
+      const response = await axios.get(`${baseUrl}/api?slack_name=example_name&track=backend`);
+      const track = response.data.track;
+      expect(track).to.equal('backend');
+    });
+  
+   
+  
+    it('should have a status_code of 200', async () => {
+      const response = await axios.get(`${baseUrl}/api?slack_name=example_name&track=backend`);
+      const statusCode = response.data.status_code;
+      expect(statusCode).to.equal(200);
+    });
+  });
+  
