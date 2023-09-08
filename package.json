@@ -1,0 +1,27 @@
+{
+  "name": "hng-stage-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "node --watch app.js",
+    "start": "node run app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/marrwan/hng-stage-1"
+  },
+  "keywords": [
+    "hng",
+    "javascript",
+    "internship"
+  ],
+  "author": "Marrwan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
