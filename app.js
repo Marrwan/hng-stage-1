@@ -18,7 +18,8 @@ app.get('/api', async (req, res) => {
     const current_day = daysOfWeek[new Date().getDay()];
 
     // Get the current UTC time
-    const utc_time = new Date().toISOString();
+    const utc_time = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+    // const utc_time = new Date().toISOString();
 
     // Get the GitHub file URL and repository URL
     const github_file_url = "https://github.com/Marrwan/hng-stage-1/blob/master/app.js";

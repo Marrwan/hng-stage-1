@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { expect } = require('chai');
 
-const baseUrl = 'http://localhost:5000'; 
+const baseUrl = 'https://hng-stage-1-lzsd.onrender.com'; 
 
 describe('Endpoint Accessibility', () => {
   it('should respond with status 200', async () => {
