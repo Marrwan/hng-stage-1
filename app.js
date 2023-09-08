@@ -16,18 +16,18 @@ app.get('/api', async (req, res) => {
 
     // Get the current day of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const currentDay = daysOfWeek[new Date().getDay()];
+    const current_day = daysOfWeek[new Date().getDay()];
 
     // Get the current UTC time
-    const utcTime = new Date().toISOString();
+    const utc_time = new Date().toISOString();
 
     // Get the GitHub file URL and repository URL
-    const githubFileURL = "https://github.com/username/repo/blob/main/file_name.ext"; // Replace with your actual URLs
-    const githubRepoURL = "https://github.com/username/repo"; // Replace with your actual URLs
+    const github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"; // Replace with your actual URLs
+    const github_repo_url = "https://github.com/username/repo"; // Replace with your actual URLs
 
     // Validate UTC time within +/-2 minutes
     const currentTime = new Date();
-    const utcTimeDate = new Date(utcTime);
+    const utcTimeDate = new Date(utc_time);
     const timeDifference = Math.abs(currentTime - utcTimeDate) / 1000 / 60; // in minutes
 
     if (timeDifference > 2) {
@@ -36,11 +36,11 @@ app.get('/api', async (req, res) => {
 
     const responseData = {
       slack_name,
-      current_day: currentDay,
-      utc_time: utcTime,
+      current_day,
+      utc_time,
       track,
-      github_file_url: githubFileURL,
-      github_repo_url: githubRepoURL,
+      github_file_url,
+      github_repo_url,
       status_code: 200,
     };
 
