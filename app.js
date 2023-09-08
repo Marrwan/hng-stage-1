@@ -22,7 +22,7 @@ app.get('/api', async (req, res) => {
     const utc_time = new Date().toISOString();
 
     // Get the GitHub file URL and repository URL
-    const github_file_url = "https://github.com/username/repo/blob/main/file_name.ext";
+    const github_file_url = "https://github.com/Marrwan/hng-stage-1/blob/main/app.js";
     const github_repo_url = "https://github.com/Marrwan/hng-stage-1"; 
 
     // Validate UTC time within +/-2 minutes
